@@ -1,46 +1,87 @@
-print('''Welcome to the quiz!
-Answer the following questions to test your knowledge.''')
+print('''Welcome to the CTRL quiz!
+Are you ready''')
 
 print('But, first of all, what is your name?')
 
 name = input('Type your name here: ')
 
 print(f'Ok {name}, let\'s get started!')
-
-print('Question 1: What is the capital of France?')
-
 points = 0
+correct = 0
 
-while points==0:
-    answer1 = input('Type your answer here: ')
-    if answer1.lower() != 'paris':
-        print('Wrong answer, try again.')
-    else:
-        points += 10
-        print(f'Congrats, you chose the right answer, you now have {points} points.')
-        break
+question1 ='Question 1(Maths): What is tan45?'
+answer1 = '1'
 
-print('Question 2: What is a goup of crows called?')
+print(question1)
+input1 = input('Type your answer here: ')
+if input1.lower() != answer1:
+    status1 = False
+else:
+    points += 10
+    correct += 1
+    status1 = True
 
-while points==10:
-    answer2 = input('Type your answer here: ')
-    if answer2.lower() != 'murder':
-        print('Wrong answer, try again.')
-    else:
-        points += 10
-        print(f'Congrats, you chose the right answer, you now have {points} points.')
-        break
+print(f"Great, let's move on")
 
-print('Question 3: What is the only even prime number?')
 
-while points==20:
-    answer3 = input("Type your answer here:")
-    if answer3.lower() != "2" or answer3.lower()!='two':
-        points += 10
-        print(f'Congrats, you chose the right answer, you now have {points} points.')
-        break
-    elif answer3.lower() != "2" and answer3.lower()!='two':
-        print('Wrong answer, try again.')
+
+question2 ='Question 2(Countries): What is the capital of France?'
+answer2 = 'paris'
+
+print(question2)
+input2 = input('Type your answer here: ')
+if input2.lower() != answer2:
+    status2 = False
+else:
+    points += 10
+    correct += 1
+    status2 = True
+
+print(f"Great, just one more left")
+
+
+
+question3 ='Question 3(Biology): What organ is responsible for pumping blood?'
+answer3 = 'heart'
+
+print(question3)
+input3 = input('Type your answer here: ')
+if input3.lower() != answer3:
+    status3 = False
+else:
+    points += 10
+    correct += 1
+    status3 = True
+
+print(f"Great, just one more left")
+
+
     
 
-print('Great, now you\'ve reached the end of the quiz. See you later.')
+print("Congrats on reaching the end of the quiz. Here is your summary:")    
+
+print(f''':
+\t Question 1: {question1}. 
+\t Ans: {answer1}
+\t Your input: {input1}
+\t Status: {status1}
+\n ''')
+
+print(f''':
+\t Question 2: {question2}. 
+\t Ans: {answer2}
+\t Your input: {input2}
+\t Status: {status2}
+\n ''')
+
+print(f''':
+\t Question 3: {question3}. 
+\t Ans: {answer3}
+\t Your input: {input3}
+\t Status: {status3}
+\n ''')
+
+print(f''':
+\t Total points: {points}. 
+\t You got {correct} questions right
+\n ''')
