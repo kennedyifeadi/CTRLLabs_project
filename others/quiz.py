@@ -12,10 +12,12 @@ correct = 0
 question1 ='Question 1(Maths): What is tan45?'
 answer1 = '1'
 
+
 print(question1)
 input1 = input('Type your answer here: ')
 if input1.lower() != answer1:
     status1 = False
+elif input1 == '1'
 else:
     points += 10
     correct += 1

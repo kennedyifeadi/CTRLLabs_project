@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Intruder Alert System</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">Intru<span>-lert</span></div>
+        <div class="profile"></div>
+    </div>
+
+    <div class="mainpage">
+        <div class="content">
+            <div class="alert_line content_section">
+                <div class="box intruder">
+                    <div>🚨</div>
+                    <div>Intruder Alert</div>
+                </div>
+                <div class="line safe" id="alertLine"></div>
+                <div class="box wall">
+                    <div>🏠</div>
+                    <div>Perimeter</div>
+                </div>
+            </div>
+
+            <div class="distance content_section">
+                <div class="distance-display" id="distanceValue">2.5m</div>
+                <div class="distance-label">Distance Measured</div>
+            </div>
+
+            <div class="intruder_status content_section">
+                <div class="status-label">LED Status Control</div>
+                <div class="led-container">
+                    <div class="led-box on" id="ledOn">💡 LED ON</div>
+                    <div class="led-box off" id="ledOff">⚫ LED OFF</div>
+                </div>
+            </div>
+
+            <div class="buzzer_status content_section">
+                <div class="buzzer-status-text" id="buzzerText">Buzzer Active</div>
+                <div class="buzzer-container">
+                    <div class="buzzer-icon active" id="buzzerIcon">🔊</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="notifications">
+            <div class="title">Notifications</div>
+            <div class="notiframe">
+                <div class="notification intruder">Intruder detected at 13:45 PM</div>
+                <div class="notification motion">Motion detected at 14:00 PM</div>
+                <div class="notification camera">Camera 3 offline at 14:15 PM</div>
+                <div class="notification buzzer">Buzzer activated at 14:20 PM</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
